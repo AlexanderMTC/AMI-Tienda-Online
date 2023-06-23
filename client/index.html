@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/client/css/style.css">
+  <link rel="stylesheet" href="/client/css/menu.css">
+  <link rel="stylesheet" href="/client/css/category.css">
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <section class="header__content">
+      <div class="header__logo">
+        <h2 class="header__logo-img">Mi Tienda <span>Online</span></h2>
+      </div>
+      <div class="header__menu">
+        <ul class="header__menu-links">
+          <li class="header__menu-link"><a href="#about">Acerca</a></li>
+          <li class="header__menu-link"><a href="#serices">Servicios</a></li>
+          <li class="header__menu-link"><a href="#products">Productos</a></li>
+        </ul>
+      </div>
+      <div class="header__buscar">
+        <input type="search" class="header_search" placeholder="Buscar Producto">
+        <img src="/client/assets/search.svg" alt="buscar" class="header__search-img">
+      </div>
+    </section>
+  </header>
+
+  <main class="main">
+    <section class="main__wrap">
+      <aside class="main__category">
+        <h3 class="category__title"><img src="/client/assets/arrow.svg"> CATEGORIAS <img src="/client/assets/arrow.svg">
+        </h3>
+        <ul class="category__list">
+          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
+          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
+          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
+          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
+          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
+          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
+          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
+        </ul>
+      </aside>
+      <section class="main_prod">
+        <!-- shop content -->
+        <div class="card-products-container">
+          <div class="card-products" id="shopContent"></div>
+        </div>
+
+        <!-- cart btn -->
+        <div class="cart-btn" id="cart-btn">🛒</div>
+        <!-- cart counter  -->
+        <span class="cart-counter" id="cart-counter">0</span>
+
+        <!-- modal -->
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-container" id="modal-container"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <section class="footer__content">
+      <div class="footer__logo">
+        <h2 class="footer__logo-img">Mi Tienda <span>Online</span></h2>
+      </div>
+      <div class="footer__menu">
+        <ul class="footer__menu-links">
+          <li class="footer__menu-link"><a href="#about">Acerca</a></li>
+          <li class="footer__menu-link"><a href="#serices">Servicios</a></li>
+          <li class="footer__menu-link"><a href="#products">Productos</a></li>
+        </ul>
+      </div>
+    </section>
+    <h3 class="footer__copyright">
+      Copyright &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      Alexander Troncoso
+    </h3>
+  </footer>
+
+  <script src="/client/js/index.js"></script>
+  <script src="/client/js/cart.js"></script>
+</body>
+
+</html>
