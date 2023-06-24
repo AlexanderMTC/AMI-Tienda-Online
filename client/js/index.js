@@ -1,11 +1,14 @@
-const productContainer = document.querySelector("card-products-container"),
+const productContainer = document.querySelector(".card-products-container"),
   productos = [];
 
 const shopContent = document.getElementById("shopContent");
 const cart = [];
 
-async function requestProducts() {
-  await fetch("https://api.escuelajs.co/api/v1/products?offset=0&limit=10")
+let ApiURL = "https://api.escuelajs.co/api/v1/products?offset=0&limit=10";
+
+async function requestProducts(ApiURL) {
+  console.log(ApiURL);
+  await fetch(ApiURL)
     .then((res) => (res.ok ? res.json() : Promise.reject(res)))
     .then((json) => {
       json.forEach((el) => {
@@ -17,6 +20,7 @@ async function requestProducts() {
           img: el.images[0],
         });
       });
+
       loadProducts();
     })
     .catch((err) => {
@@ -25,18 +29,17 @@ async function requestProducts() {
       productContainer.innerHTML = `Error ${err.status}: ${message}`;
     });
 }
-requestProducts();
+requestProducts(ApiURL);
 
 const loadProducts = () => {
   productos.forEach((product) => {
     const content = document.createElement("div");
     content.className = "card";
     content.innerHTML = `
-  <img src="${product.img}">
-  <h3>${product.productName}</h3>
-  <p class="price">${product.price} $</p>
-  `;
-    shopContent.append(content);
+    <img src="${product.img}">
+    <h3>${product.productName}</h3>
+    <p class="price">${product.price} $</p>
+    `;
 
     const buyButton = document.createElement("button");
     buyButton.innerText = "Buy";
@@ -65,5 +68,6 @@ const loadProducts = () => {
         displayCartCounter();
       }
     });
+    shopContent.append(content);
   });
 };

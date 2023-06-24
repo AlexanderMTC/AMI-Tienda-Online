@@ -44,10 +44,10 @@
 .category__link {
   display: inline-block;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #000;
   background-color: #ffffff75;
   border-bottom: 3px solid #00000031;
-  padding: 8px;
+  padding: 5px;
   width: 100%;
 }

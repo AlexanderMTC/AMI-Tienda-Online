@@ -35,24 +35,31 @@
   </header>
 
   <main class="main">
+    <!-- category content -->
     <section class="main__wrap">
       <aside class="main__category">
         <h3 class="category__title"><img src="/client/assets/arrow.svg"> CATEGORIAS <img src="/client/assets/arrow.svg">
         </h3>
         <ul class="category__list">
-          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
-          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
-          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
-          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
-          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
-          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
-          <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li>
+          <!-- <li class="category__links"><a href="#" class="category__link">Categoria 1</a></li> -->
         </ul>
       </aside>
       <section class="main_prod">
         <!-- shop content -->
         <div class="card-products-container">
           <div class="card-products" id="shopContent"></div>
+        </div>
+
+        <div class="card-products-content">
+          <div class="card-product">
+            <template id="card">
+              <div class="card">
+                <img>
+                <h3></h3>
+                <p></p>
+              </div>
+            </template>
+          </div>
         </div>
 
         <!-- cart btn -->
@@ -90,7 +97,9 @@
   </footer>
 
   <script src="/client/js/index.js"></script>
+  <script src="/client/js/categories.js"></script>
   <script src="/client/js/cart.js"></script>
+  <script src="/client/js/search.js"></script>
 </body>
 
 </html>

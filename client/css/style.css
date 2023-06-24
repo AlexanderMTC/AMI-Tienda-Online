@@ -30,7 +30,8 @@ main {
   border: thin solid #00000031;
 }
 
-.card-products-container {
+.card-products-container,
+.card-products-content {
   margin: 5vh auto;
 }
 
