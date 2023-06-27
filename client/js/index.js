@@ -1,8 +1,15 @@
+const menuHamb = document.querySelector(".header__hamb");
+const header = document.querySelector(".header");
+
 const productContainer = document.querySelector(".card-products-container"),
   productos = [];
 
 const shopContent = document.getElementById("shopContent");
 const cart = [];
+
+menuHamb.addEventListener("click", () => {
+  header.classList.toggle("header-mostrar");
+});
 
 let ApiURL = "https://api.escuelajs.co/api/v1/products?offset=0&limit=10";
 

@@ -15,6 +15,9 @@
 </head>
 
 <body>
+  <div class="header__hamb">
+    <img src="/client/assets/menu.svg" alt="hamburguer menu">
+  </div>
   <header class="header">
     <section class="header__content">
       <div class="header__logo">
@@ -28,7 +31,7 @@
         </ul>
       </div>
       <div class="header__buscar">
-        <input type="search" class="header_search" placeholder="Buscar Producto">
+        <input type="search" class="header_search" id="search" placeholder="Buscar Producto">
         <img src="/client/assets/search.svg" alt="buscar" class="header__search-img">
       </div>
     </section>
@@ -45,21 +48,10 @@
         </ul>
       </aside>
       <section class="main_prod">
+
         <!-- shop content -->
         <div class="card-products-container">
           <div class="card-products" id="shopContent"></div>
-        </div>
-
-        <div class="card-products-content">
-          <div class="card-product">
-            <template id="card">
-              <div class="card">
-                <img>
-                <h3></h3>
-                <p></p>
-              </div>
-            </template>
-          </div>
         </div>
 
         <!-- cart btn -->
@@ -98,8 +90,8 @@
 
   <script src="/client/js/index.js"></script>
   <script src="/client/js/categories.js"></script>
-  <script src="/client/js/cart.js"></script>
   <script src="/client/js/search.js"></script>
+  <script src="/client/js/cart.js"></script>
 </body>
 
 </html>
