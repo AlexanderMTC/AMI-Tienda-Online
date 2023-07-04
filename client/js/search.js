@@ -6,7 +6,12 @@ input.addEventListener("search", () => {
   productos.length = 0;
   searchProducts(input.value);
   input.value = "";
-  header.classList.remove("header-mostrar");
+  header.classList.remove("mostrar");
+  if (header.classList.contains("mostrar")) {
+    menuHambImg.setAttribute("src", "/client/assets/close.svg");
+  } else {
+    menuHambImg.setAttribute("src", "/client/assets/menu.svg");
+  }
 });
 
 image.addEventListener("click", () => {
@@ -14,7 +19,12 @@ image.addEventListener("click", () => {
   productos.length = 0;
   searchProducts(input.value);
   input.value = "";
-  header.classList.remove("header-mostrar");
+  header.classList.remove("mostrar");
+  if (header.classList.contains("mostrar")) {
+    menuHambImg.setAttribute("src", "/client/assets/close.svg");
+  } else {
+    menuHambImg.setAttribute("src", "/client/assets/menu.svg");
+  }
 });
 
 function searchProducts(pSearch) {

@@ -1,4 +1,5 @@
 const menuHamb = document.querySelector(".header__hamb");
+const menuHambImg = document.querySelector(".header__hamb img");
 const header = document.querySelector(".header");
 
 const productContainer = document.querySelector(".card-products-container"),
@@ -8,7 +9,12 @@ const shopContent = document.getElementById("shopContent");
 const cart = [];
 
 menuHamb.addEventListener("click", () => {
-  header.classList.toggle("header-mostrar");
+  header.classList.toggle("mostrar");
+  if (header.classList.contains("mostrar")) {
+    menuHambImg.setAttribute("src", "/client/assets/close.svg");
+  } else {
+    menuHambImg.setAttribute("src", "/client/assets/menu.svg");
+  }
 });
 
 let ApiURL = "https://api.escuelajs.co/api/v1/products?offset=0&limit=10";
